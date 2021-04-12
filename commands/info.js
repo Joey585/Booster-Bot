@@ -24,6 +24,15 @@ if (infoArgs === 'ban') {
     .addField('Usage', '+ban @(the person you want to ban)')
     return message.channel.send(banInfoEmbed)
 }
+if (infoArgs === 'coin') {
+    const coinInfoEmbed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${infoArgs} command info`)
+    .setDescription(`This command will send the price of Ethereum`)
+    .addField('Example', '+coin')
+    .addField('Usage', '+coin')
+    return message.channel.send(coinInfoEmbed)
+}
 if (infoArgs === 'covid') {
     const covidInfoEmbed = new MessageEmbed()
     .setColor('RANDOM')
@@ -77,6 +86,33 @@ if (infoArgs === 'kick') {
     .addField('Example', '+kick @Joey585')
     .addField('Usage', '+kick (@the person you want to kick)')
     return message.channel.send(kickInfoEmbed)
+}
+if (infoArgs === 'lock') {
+    const lockInfoEmbed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${infoArgs} command info`)
+    .setDescription(`This command will lock a channel by making @everyone not being able to type`)
+    .addField('Example', '+lock')
+    .addField('Usage', '+lock')
+    return message.channel.send(lockInfoEmbed)
+}
+if (infoArgs === 'mute') {
+    const muteInfoEmbed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${infoArgs} command info`)
+    .setDescription(`This command will mute a player forever (unless you do +unmute)`)
+    .addField('Example', '+mute @Joey585')
+    .addField('Usage', '+mute @User')
+    return message.channel.send(muteInfoEmbed)
+}
+if (infoArgs === 'ping') {
+    const pingInfoEmbed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${infoArgs} command info`)
+    .setDescription(`This command will tell you your ping`)
+    .addField('Example', '+ping')
+    .addField('Usage', '+ping')
+    return message.channel.send(pingInfoEmbed)
 }
 if (infoArgs === 'prune') {
     const pruneInfoEmbed = new MessageEmbed()
@@ -133,7 +169,15 @@ if (infoArgs === 'tempmute') {
     .setDescription(`This command will temporarily mute someone`)
     .addField('Example', '+tempmute @Joey585 30 Spamming memes')
     .addField('Usage', '+tempmute (@User) (Time in minutes) (Reason)')
-    .setFooter('NOTE: Currently, this only works if you have the administrator permission in a server. Could change later')
+    return message.channel.send(tempmuteInfoEmbed)
+}
+if (infoArgs === 'unlock') {
+    const tempmuteInfoEmbed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle(`${infoArgs} command info`)
+    .setDescription(`This command will unlock the channel you are in`)
+    .addField('Example', '+unlock')
+    .addField('Usage', '+unlock')
     return message.channel.send(tempmuteInfoEmbed)
 }
 if (infoArgs === 'unmute') {
@@ -143,7 +187,6 @@ if (infoArgs === 'unmute') {
     .setDescription(`This command will unmute a user`)
     .addField('Example', '+unmute @Joey585')
     .addField('Usage', '+unmute (@User)')
-    .setFooter('NOTE: Currently, this only works if you have the administrator permission in a server. Could change later')
     return message.channel.send(unmuteInfoEmbed)
 }
 if (infoArgs === 'warn') {
